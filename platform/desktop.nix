@@ -7,9 +7,6 @@
 			channel = https://nixos.org/channels/nixos-unstable;
 		};
 	};
-	networking = {
-		wireless.enable = true;
-	};
 	services.xserver = {
 		enable = true;
 		layout = "us";

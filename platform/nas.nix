@@ -5,7 +5,6 @@
 		autoUpgrade.enable = true;
 	}
 	networking = {
-		wireless.enable = false;
 		firewall = {
 			enable = true;
 			allowedUDPPorts = [ 80 8080 ];
