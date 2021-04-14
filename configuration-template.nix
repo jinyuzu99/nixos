@@ -18,6 +18,7 @@
 			# ./driver/intel.nix
 			# ./driver/nvidia.nix
 			# ./module/proxy.nix
+			# ./module/tuna-mirror.nix
 			# ./module/develop.nix
 			# ./module/vmware.nix
 			# ./module/gnome.nix
