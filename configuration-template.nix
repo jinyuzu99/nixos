@@ -19,6 +19,7 @@
 			# ./module/proxy.nix
 			# ./module/tuna-mirror.nix
 			# ./module/develop.nix
+			# ./module/docker.nix
 			# ./module/gnome.nix
 			# ./module/pantheon.nix
 	];
