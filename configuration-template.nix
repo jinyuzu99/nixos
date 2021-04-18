@@ -2,8 +2,8 @@
 {
 	environment.systemPackages = with pkgs; [
 		fish mosh
-		openssl curl git
-		tmux micro
+		openssl wget git
+		tmux micro xsel
 	];
 	services = {
 		openssh.enable = true;
