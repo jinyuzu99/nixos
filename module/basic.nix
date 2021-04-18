@@ -15,5 +15,4 @@
             e = "micro";
 		};
 	};
-    users.defaultUserShell = pkgs.fish;
 }
