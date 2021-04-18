@@ -15,5 +15,5 @@
             e = "micro";
 		};
 	};
-    users.defaultUserShell = "pkgs.fish";
+    users.defaultUserShell = pkgs.fish;
 }
