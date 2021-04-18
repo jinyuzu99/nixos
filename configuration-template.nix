@@ -1,13 +1,5 @@
 { config, pkgs, ... }:
 {
-	environment.systemPackages = with pkgs; [
-		fish mosh
-		openssl wget git
-		tmux micro xsel
-	];
-	services = {
-		openssh.enable = true;
-	};
 	imports = [
 			./hardware-configuration.nix
 			# ./platform/desktop.nix
@@ -18,11 +10,15 @@
 			# ./driver/vmware.nix
 			# ./desktop/gnome.nix
 			# ./desktop/pantheon.nix
+			./module/basic.nix
 			# ./module/proxy.nix
 			# ./module/tuna-mirror.nix
 			# ./module/develop.nix
 			# ./module/docker.nix
 	];
+	services = {
+		openssh.enable = true;
+	};
 	system.stateVersion = "20.09";
 	boot.loader = {
 		systemd-boot.enable = true;
