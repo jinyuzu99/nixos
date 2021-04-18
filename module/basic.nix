@@ -11,7 +11,8 @@
 	};
     environment = {
 		shellAliases = {
-			up =  sudo nixos-rebuild switch --upgrade;
+			up = "sudo nixos-rebuild switch --upgrade";
+            e = "micro";
 		};
 	};
     users.defaultUserShell = "pkgs.fish";
