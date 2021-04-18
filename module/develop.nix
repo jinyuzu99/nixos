@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
 	environment.systemPackages = with pkgs; [
-		clang go deno
+		clang go deno docker
 		vscode
 	];
 }
