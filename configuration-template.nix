@@ -16,12 +16,12 @@
 			# ./driver/intel.nix
 			# ./driver/nvidia.nix
 			# ./driver/vmware.nix
+			# ./desktop/gnome.nix
+			# ./desktop/pantheon.nix
 			# ./module/proxy.nix
 			# ./module/tuna-mirror.nix
 			# ./module/develop.nix
 			# ./module/docker.nix
-			# ./module/gnome.nix
-			# ./module/pantheon.nix
 	];
 	system.stateVersion = "20.09";
 	boot.loader = {
