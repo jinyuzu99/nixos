@@ -2,7 +2,7 @@
 {
 	environment.systemPackages = with pkgs; [
 		openssl wget git
-		micro xsel
+		htop micro xsel
 	];
 	programs = {
 		fish.enable = true;
