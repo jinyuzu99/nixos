@@ -9,6 +9,7 @@
 			# ./driver/nvidia.nix
 			# ./driver/vmware.nix
 			# ./desktop/gnome.nix
+			# ./desktop/lumina.nix
 			# ./desktop/pantheon.nix
 			./module/basic.nix
 			# ./module/proxy.nix
@@ -19,7 +20,7 @@
 	services = {
 		openssh.enable = true;
 	};
-	system.stateVersion = "20.09";
+	system.stateVersion = "21.05";
 	boot.loader = {
 		systemd-boot.enable = true;
 		efi.canTouchEfiVariables = true;
