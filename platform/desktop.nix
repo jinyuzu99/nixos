@@ -2,14 +2,21 @@
 {
 	services.xserver = {
 		enable = true;
-		layout = "us";
 		libinput.enable = true;
 	};
 	sound.enable = true;
-	users.users.user = {
+	hardware.pulseaudio.enable = false;
+	security.rtkit.enable = true;
+	services.pipewire = {
+		enable = true;
+ 		alsa.enable = true;
+		alsa.support32Bit = true;
+		pulse.enable = true;
+		jack.enable = true;
+	};
+	users.users.anyuzu99 = {
 		password = "password";
 		isNormalUser = true;
 		extraGroups = [ "wheel" "networkmanager" "docker" ];
 	};
-	nixpkgs.config.allowUnfree = true;
 }

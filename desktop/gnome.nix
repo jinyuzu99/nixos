@@ -1,18 +1,13 @@
 { config, pkgs, ... }:
 {
-	services.xserver.desktopManager.gnome3.enable = true;
-	environment.gnome3.excludePackages = with pkgs; [
-		gnome3.gnome-calculator
-		gnome3.gnome-calendar
-		gnome3.gnome-contacts
-		gnome3.gnome-clocks
-		gnome3.gnome-maps
-		gnome3.gnome-weather
-		gnome3.cheese
-		gnome3.geary
-		gnome3.simple-scan
-		gnome3.yelp
-		gnome-connections
-		gnome-photos
+	services.xserver.displayManager.gdm.enable = true;
+	services.xserver.desktopManager.gnome.enable = true;
+	environment.gnome.excludePackages = with pkgs; [
+		gnome.gnome-calendar
+		gnome.gnome-contacts
+		gnome.gnome-weather
+		gnome.cheese
+		gnome.simple-scan
+		gnome.yelp
 	];
 }

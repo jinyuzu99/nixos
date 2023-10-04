@@ -1,8 +1,14 @@
 { config, pkgs, ... }:
 {
-	services.xserver = {
-		videoDrivers = [ "modesetting" ];
-		useGlamor = true;
+	nixpkgs.config.packageOverrides = pkgs: {
+		vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
 	};
-	hardware.opengl.extraPackages = [ intel-compute-runtime ];
+
+	hardware.opengl = {
+		enable = true;
+		extraPackages = with pkgs; [
+			intel-media-driver # LIBVA_DRIVER_NAME=iHD
+			intel-compute-runtime # OpenCL
+			];
+	};
 }
