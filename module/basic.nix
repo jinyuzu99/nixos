@@ -12,8 +12,8 @@
     environment = {
 		shellAliases = {
 			up = "sudo nixos-rebuild switch --upgrade";
-            cg = "sudo nix-collect-garbage";
-            e = "micro";
+			cg = "sudo nix-collect-garbage";
+			e = "micro";
 		};
 	};
 }

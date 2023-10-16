@@ -1,7 +1,9 @@
 # pull
-git clone https://github.com/sayomelu/nixos ~/nixos
-cp /etc/nixos/hardware-configuration.nix ~/nixos
-sudo cp -rf ~/nixos /etc/nixos
+git clone https://github.com/sayomelu/nixos ~/.config/nixos
+cp /etc/nixos/hardware-configuration.nix ~/.config/nixos
+rm -rf /etc/nixos
+sudo ln -sF ~/.config/nixos /etc/nixos
+sudo cp -rf ~/.config/nixos /etc/nixos
 cd /etc/nixos
 sudo cp configuration-template.nix configuration.nix
 
@@ -28,6 +30,6 @@ nixos-generate-config --root /mnt
 nano /mnt/etc/nixos/configuration.nix
 nixos-install
 
-nix-channel --add https://nixos.org/channels/nixos-unstable nixos
-nix-channel --add https://mirrors.tuna.tsinghua.edu.cn/nix-channels/nixos-unstable nixos
+nix-channel --add https://mirrors.cernet.edu.cn/nix-channels/nixos-23.05 nixos
 nix-channel --update
+nixos-rebuild switch --upgrade
